@@ -1,6 +1,6 @@
 # Basic Commands in ROS, from the ROSwiki tutorials 
 
-##Making a catkin workspace
+## Making a catkin workspace
 
 	`mkdir -p ~/catkin_ws/src
 	cd ~/catkin_ws/
@@ -13,19 +13,19 @@
 	
 	/home/youruser/catkin_ws/src:/opt/ros/kinetic/share
 
-###rospack
+### rospack
 `rospack find {package-name}`
 	This tells you where exactly the package is installed on the machine. 
 	In my case, /opt/ros/kinetic/....
 
-###roscd 
+### roscd 
 `roscd <package-name>`
 	As the name suggests, it takes you directly to the package! But only within ROS_PACKAGE_PATH
 
 To see environment variables, do 
 `printenv | grep ROS`
 
-###rosls
+### rosls
 `rosls <package-name>`
 	Would return the list of files inside that directory 
 
@@ -43,7 +43,7 @@ The recommended method of working with catkin packages is using a catkin workspa
       CMakeLists.txt     
       package.xml  ` 
 
-Create new package in a workspace
+## Create new package in a workspace
 	`catkin_create_pkg beginner_tutorials std_msgs rospy roscpp`
 	Last three terms are the dependencies that need to be installed too! beignner_tutorials is the name of the package. 
 
