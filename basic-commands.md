@@ -35,19 +35,19 @@ The simplest possible package might have a structure which looks like this:
 CMakeLists.txt
 package.xml
 
-The recommended method of working with catkin packages is using a catkin workspace
+The recommended method of working with catkin packages is using a catkin workspace\
 workspace_folder/        
-  src/                   
-    CMakeLists.txt       
-    package_1/
-      CMakeLists.txt     
-      package.xml  
+	src/                   
+		CMakeLists.txt       
+	package_1/
+		CMakeLists.txt     
+		package.xml  
 
 ## Create new package in a workspace
-`catkin_create_pkg beginner_tutorials std_msgs rospy roscpp`
+`catkin_create_pkg beginner_tutorials std_msgs rospy roscpp`\
 Last three terms are the dependencies that need to be installed too! beignner_tutorials is the name of the package. 
 
-To add the workspace to your ROS environment you need to source the generated setup file:
+To add the workspace to your ROS environment you need to source the generated setup file:\
 `source ~/catkin_ws/devel/setup.bash` 
 (this is after running catkin_make, of course)
 
