@@ -58,8 +58,39 @@ To add the workspace to your ROS environment you need to source the generated se
 	
 depends1 means only its immediate dependencies, if we just do 'depends', it would recursively print all dependencies. 
 
-Dependencies of Dependencie of the packages:
-`rospack depends1 <rospy>` (for eg.)
+Dependencies of Dependencies of the packages:
+`rospack depends1 <rospy>` 
+
+## ROS Graph Concepts
+
+- A node is an executable that uses ROS to communicate with the other nodes. 
+- Message is the ROS data type used when subscribing or publishing a topic. 
+
+So basically, nodes publish messages to a topic, and also, they subscribe to a topic to receive messages. 
+These ROSnodes use a ROS client library to communicate with other nodes. These client libraries allow nodes written in different languages to communicate with one another. For instance, rospy is in python and roscpp in CPP. 
+
+### roscore
+The FIRST THING WE RUN while using ROS. 
+
+### rosnode
+This diplays information of all the nodes that are currently running. 
+`rosnode list`
+If we run `roscore` followed by `rosnode list` we get the output as `/rosout`. rosout is a node that's always running. This collects and logs all the outputs of the nodes. 
+`rosnode info /rosout` returns information about the specified node, in this case, rosout. 
+
+### rosrun 
+rosrun allows us to use the package name. We can directly run a node within a package, without having to know the package path! 
+`rosrun <package-name> <node-name<`
+For instance, `rosrun turtlesim turtlesim_node`
+
+We can also reassign names to our nodes. 
+`rosrun turtlesim turtlesim_node __name:=tortoise`
+Now when we do rosnode list, we will get output as '/rosout' and '/tortoise'. 
+
+Use 'ping' to check if the node is up and running. 
+`rosnode ping tortoise`
+
+
 
 
 
