@@ -6,7 +6,8 @@
 `cd ~/catkin_ws/`\
 `catkin_make`
 
-Inside the 'devel' folder you can see that there are now several setup.*sh files. Sourcing any of these files will overlay this workspace on top of your environment. 
+Inside the 'devel' folder you can see that there are now several setup.sh files. 
+Sourcing any of these files will overlay this workspace on top of your environment. 
  	
 `source devel/setup.bash`\
 `echo $ROS_PACKAGE_PATH`
